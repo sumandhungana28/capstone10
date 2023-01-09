@@ -1,38 +1,77 @@
-import React from 'react';
+
+import React from "react";
 import "./nav.css";
+import Home from "./Home";
+import Order from "./Order";
+import Menu from "./Menu";
+import About from "./About";
+import Reservation from "./Reservation";
+import Login from "./Login";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function Nav() {
   return (
-    <div className='nav1'>
-    <div> <img src="logo.png" alt="logo" height={150} width={150} /></div>
-    <ul className='container2'>
-      <li>
-        <a href="#">Home</a>
-      </li>
+   
+    
+    <Router>
+<>
 
-      <li>
-        <a href="#">Home</a>
+<nav className="nav1">
+ <img src="logo.png" alt="logo" height={150} width={150} />
+    <ul className='ul'>
+   
+    <li>
+    <Link to="/" >Home</Link>
       </li>
       <li>
-        <a href="#">About</a>
+      <Link to="/about" >About</Link>
       </li>
-      <li>
-        <a href="#">Menu</a>
-      </li>
-    
-      <li>
-        <a href="#">Reservation</a>
-      </li>
-    
-      <li>
-        <a href="#">Order Online</a>
+      <li className="menu">
+      <Link to="/menu" >Menu</Link>
       </li>
     
       <li>
-        <a href="#">Log In</a>
+      <Link to="/reservation" >Reservation</Link>
       </li>
+    
+      <li>
+      <Link to="/order" >Order Online</Link>
+      </li>
+      <li>
+      <Link to="/login" >Log In</Link>
+      </li>
+    
+      
     </ul>
-    </div>
+    </nav>
+    <Routes>
+        <Route  path="/about" element={<About />} />
+          
+          
+        <Route path="/menu" element={<Menu />} />
+            
+          
+       <Route path="/" element={<Home />} />
+            
+        <Route path="/reservation"  element={<Reservation />} />
+
+       <Route path="/order"  element={<Order />} />
+
+       <Route path="/login"  element={<Login />} />
+            
+          
+        </Routes>
+        </>
+    </Router>
+    
+    
   )
 }
 
