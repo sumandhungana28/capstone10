@@ -1,0 +1,46 @@
+.banner img{
+    display: block;
+    width: 50%;
+    height: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    transition: transform .7s ease-in-out;
+
+}
+.banner{
+    position: relative;
+    background-color: black;
+}
+.banner h1{
+    position :absolute;
+    top: 30%;
+    left: 15%;
+    color: blue;
+    font-size: 3rem;
+
+}
+.banner img:hover{
+    transform: rotate(360deg);
+}
+
+nav a:hover{
+    background-color:lightblue;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.content img{
+height: 200px;
+width: 200px;
+}
+.content img:hover{
+    -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); 
+}
+.content article{
+    margin: 20px;
+    background-color: lightseagreen;
+}
